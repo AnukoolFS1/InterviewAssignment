@@ -13,4 +13,4 @@ https://anukoolfs1.github.io/InterviewAssignment/
 
 <hr/>
 
-Author : anukool
+Author : Anukool
