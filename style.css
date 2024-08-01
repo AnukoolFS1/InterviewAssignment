@@ -1,0 +1,619 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url('./Fonts/Poppins-Light.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('./Fonts/Poppins-Bold.ttf');
+}
+
+:root {
+    --h2color: #ff8490;
+    --headingFont: sans-serif;
+    --sectionMargin: 10vh 15vw;
+    --btnColor: #ff3147;
+    --Poppins-para: Poppins;
+}
+
+/* award winning section --------------------------------------*/
+
+.award {
+    display: flex;
+    padding: var(--sectionMargin);
+    letter-spacing: 1px;
+}
+
+.award article {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.award-img {
+    align-items: center;
+}
+
+.award-img>img {
+    width: 400px;
+    height: 600px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.award h1 {
+    font-family: sans-serif;
+    color: var(--btnColor);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.award article h2 {
+    text-transform: uppercase;
+    font-size: 50px;
+}
+
+.award p {
+    line-height: 25px;
+    width: 450px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: var(--Poppins-para);
+}
+
+.award button {
+    border: none;
+    font-family: var(--Poppins-para);
+    font-weight: 600;
+    background-color: #ff3147;
+    padding: 10px 20px;
+    align-self: start;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.division {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: none;
+    place-items: center;
+    background-color: #00000099;
+}
+
+.ContactUs {
+    background-color: white;
+    padding: 50px;
+    height: 400px;
+    width: 500px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    font-family: var(--Poppins-para);
+}
+
+
+.ContactUs h3 {
+    font-family: Poppins-Bold;
+}
+
+.ContactUs form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    gap: 35px;
+}
+
+.ContactUs form>div {
+    display: flex;
+    width: 100%;
+
+}
+
+.closeContact {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    color: grey;
+    cursor: pointer;
+}
+
+.contact-check {
+    accent-color: var(--btnColor);
+    margin-right: 10px;
+    align-self: start;
+    transform: translate(0px, 4px);
+}
+
+.emailinput {
+    width: 93%;
+}
+
+.contact-check+p {
+    color: grey;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.inputRelSpan {
+    outline: none;
+    border: none;
+    border-bottom: 1.5px solid grey;
+    z-index: 2;
+    padding: 4px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background-color: transparent;
+}
+
+.input-span {
+    position: relative;
+    padding: 5px;
+    width: 100%;
+    padding: 0px 12px;
+    height: 5vh;
+}
+
+.inputRelSpan+span {
+    position: absolute;
+    top: 4px;
+    left: 12px;
+    font-size: 14px;
+    color: grey;
+    transition: .3s all;
+}
+
+
+.inputRelSpan:focus+span {
+    scale: .8;
+    top: -14px;
+    left: 1px;
+}
+
+.terms {
+    padding: 0px 10px;
+    align-items: start;
+}
+
+.ContactUs button {
+    border: none;
+    font-family: var(--Poppins-para);
+    font-weight: 600;
+    background-color: #ff3147;
+    padding: 10px 20px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.success {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: calc(50% - 70px);
+    font-family: Poppins-Bold;
+    width: fit-content;
+    padding: 10px 15px;
+    border-radius: 10px;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    box-shadow: 1px 1px 10px black;
+    animation: success .3s 1 forwards linear;
+}
+
+.success>div {
+    display: grid;
+    place-items: center;
+    padding: 4px;
+    border-radius: 50%;
+    background-color: var(--btnColor);
+    color: white;
+}
+
+@keyframes success {
+    from {
+        transform: translateY(-100vh);
+        color: grey;
+    }
+
+    to {
+        transform: translate(0px);
+    }
+}
+
+/* what we do section -------------------------------------*/
+
+.whtWeDo {
+    padding: var(--sectionMargin);
+    background-color: #672C2C1F;
+}
+
+.whtWeDo h1 {
+    margin-bottom: 3.5vh;
+}
+
+.whtWeDo h1,
+.whyChooseUs h1,
+.ourProject h1,
+.experts h1,
+.feedback h1 {
+    font-family: sans-serif;
+    color: var(--btnColor);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.services h2 {
+    flex: 1 1 80vw;
+}
+
+.services h2,
+.whyChooseUs h2,
+.ourProject h2,
+.experts h2,
+.feedback h2 {
+    font-size: 45px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+.slider {
+    overflow-x: hidden;
+    width: 83.9vw;
+    padding-bottom: 4px;
+    height: 450px;
+    transition: all .3s linear;
+}
+
+.slider:hover {
+    overflow-x: scroll;
+}
+
+.slider::-webkit-scrollbar {
+    background-color: none;
+    height: 8px;
+}
+
+.slider::-webkit-scrollbar-thumb {
+    background-color: none;
+}
+
+.services {
+    display: flex;
+    gap: 50px;
+}
+
+.services p {
+    font-family: var(--Poppins-para);
+    font-size: 13px;
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+}
+
+.slidings {
+    display: flex;
+    width: 131vw;
+    margin-top: 30px;
+    gap: 30px;
+}
+
+.slidings:hover {
+    animation: none;
+}
+
+.art1,
+.art2,
+.art3,
+.art4,
+.art5 {
+    display: inline-block;
+    height: 400px;
+    width: 300px;
+    border-radius: 4px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.art1 {
+    background-image: url(./images/1@2x.png);
+}
+
+.art2 {
+    background-image: url(./images/2@2x.png);
+}
+
+.art3 {
+    background-image: url(./images/pexels-francesco-ungaro-4322027.jpg);
+}
+
+.art4 {
+    background-image: url(./images/3@2x.png);
+}
+
+.art5 {
+    background-image: url(./images/pexels-krislucas90-3264504.jpg);
+}
+
+.bullets {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 8px;
+    padding: 10px;
+}
+
+.bullet {
+    cursor: pointer;
+}
+
+.highlight-bullet {
+    padding: 2px 8px;
+    border-radius: 50%;
+    color: var(--btnColor);
+    outline: 1px solid var(--btnColor);
+}
+
+.anchor-Readmore {
+    text-decoration: none;
+    background-color: #F4F4F4;
+    color: var(--btnColor);
+    padding: 10px 15px;
+    margin-top: 20px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.anchor-Readmore>span {
+    margin-left: 10px;
+}
+
+.slidings>article>div {
+    background-color: var(--btnColor);
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    text-align: center;
+    color: white;
+    font-family: var(--Poppins-para);
+    transition: .3s all linear;
+}
+
+.slidings>article:hover>div {
+    display: flex;
+}
+
+.slidings>article>div>div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.slidings>article>div>div>p {
+    font-size: 13px;
+}
+
+
+.slidings>article>div>img {
+    width: 70px;
+    height: 70px;
+}
+
+/* Why Choose Us -------------------------------------- */
+
+.whyChooseUs {
+    padding: var(--sectionMargin);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.whyChooseUs>section {
+    display: flex;
+    align-items: end;
+    margin-top: 30px;
+}
+
+.whyChooseUs>section>article {
+    font-family: var(--Poppins-para);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.whyChooseUs>section>article>img {
+    width: 60px;
+}
+
+.whyChooseUs>section>article>p {
+    font-size: 14px;
+}
+
+/* Our Project ---------------------------------------*/
+
+.ourProject {
+    padding: var(--sectionMargin);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.ourProject>section {
+    margin-top: 30px;
+    display: flex;
+    gap: 25px;
+}
+
+.ourProject>section>div>img {
+    width: 45vw;
+    height: 62vh;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.ourProject>section>section {
+    flex-basis: 290px;
+}
+
+.imageContext {
+    display: flex;
+    font-family: var(--Poppins-para);
+    flex-direction: column;
+    gap: 8px;
+    padding: 27px 25px;
+    border-radius: 2px;
+    background-color: #F6F6F6;
+    margin-bottom: 2px;
+    transition: .5s all linear;
+}
+
+.imageContext-background {
+    background-color: #ff3147;
+    color: white;
+}
+
+.imageContext h4 {
+    font-weight: 900;
+    font-family: Poppins-Bold;
+}
+
+.imageContext p {
+    font-weight: 900;
+    font-size: 14px;
+}
+
+/* Expert ----------------------------------- */
+
+.experts {
+    padding: var(--sectionMargin);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #f0f0f0;
+}
+
+.experts>section {
+    margin-top: 20px;
+    display: flex;
+    gap: 50px;
+}
+
+.experts>section>article {
+    background-color: white;
+    padding: 20px;
+    width: 180px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--Poppins-para);
+    transition: .2s box-shadow linear;
+    cursor: default;
+}
+
+.experts>section>article:hover {
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.849);
+    transform: translateY(-2px);
+}
+
+.experts>section>article h1 {
+    font-family: var(--Poppins-para);
+    font-weight: 100;
+    font-size: 50px;
+    color: black;
+}
+
+.experts>section>article p {
+    font-size: 14px;
+}
+
+.experts>section>article>img {
+    width: 28px;
+}
+
+/* feedback ----------------------------------------------- */
+
+.feedback {
+    padding: var(--sectionMargin);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.testimony {
+    position: relative;
+    margin-top: 20px;
+    font-family: var(--Poppins-para);
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+}
+
+.testimony p {
+    font-weight: 900;
+    width: 620px;
+    text-align: left;
+}
+
+.testimony cite {
+    font-family: Poppins-Bold;
+    color: var(--btnColor);
+    font-weight: 900;
+    font-style: normal;
+}
+
+.description {
+    color: grey;
+    font-size: 14px;
+}
+
+.quotemark {
+    position: absolute;
+    opacity: .7;
+    z-index: -1;
+    bottom: 70%;
+    left: -23px;
+}
+
+footer{
+    background-color: var(--btnColor);
+    height: 20vh;
+    padding: var(--btnColor);
+    display: grid;
+    place-items: center;
+}
+
+footer img{
+    width: 60vw;
+}
