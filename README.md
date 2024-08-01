@@ -1,5 +1,5 @@
 # Project
-This is project was for an assignment round to Fyle company. 
+This project was for an assignment round to a company. 
 
 <br/>
 
