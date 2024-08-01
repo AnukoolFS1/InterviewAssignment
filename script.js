@@ -178,7 +178,6 @@ bulletsClick3.onclick = () => {
 
 setInterval(() => {
     chngImgs = ++chngImgs % images.length
-    console.log(chngImgs);
     slideshow.src = images[chngImgs];
     imageContext[chngImgs].classList.add('imageContext-background')
     if (chngImgs === 0) {
